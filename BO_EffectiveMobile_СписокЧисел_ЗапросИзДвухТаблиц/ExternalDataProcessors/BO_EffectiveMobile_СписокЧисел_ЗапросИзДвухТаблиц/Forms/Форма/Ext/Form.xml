@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Тестовое задание Копыловой В. В.</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>50</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="Задание1" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание 1</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<ScrollOnCompress>true</ScrollOnCompress>
+					<ExtendedTooltip name="Задание1РасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопок" id="98">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопок и данных</v8:content>
+								</v8:item>
+							</Title>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="99"/>
+							<ChildItems>
+								<InputField name="КоличествоЧисел" id="7">
+									<DataPath>КоличествоЧисел</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество чисел</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Допустимые значения от 8 до 16</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="КоличествоЧиселКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="КоличествоЧиселРасширеннаяПодсказка" id="9"/>
+									<QuickChoice>true</QuickChoice>
+									<MinValue xsi:type="xs:decimal">8</MinValue>
+									<MaxValue xsi:type="xs:decimal">16</MaxValue>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+								</InputField>
+								<Button name="ЗаполнитьСписок" id="10">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗаполнитьСписок</CommandName>
+									<ExtendedTooltip name="ЗаполнитьСписокРасширеннаяПодсказка" id="11"/>
+								</Button>
+								<Button name="УдалитьЛишнее" id="25">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УдалитьЛишнее</CommandName>
+									<ExtendedTooltip name="УдалитьЛишнееРасширеннаяПодсказка" id="26"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСписка" id="45">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа для списка</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСпискаРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<Table name="СписокЧисел" id="47">
+									<Representation>List</Representation>
+									<ReadOnly>true</ReadOnly>
+									<ChangeRowSet>false</ChangeRowSet>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>СписокЧисел</DataPath>
+									<RowPictureDataPath>СписокЧисел.Picture</RowPictureDataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>Pickup</ExcludedCommand>
+									</CommandSet>
+									<ContextMenu name="СписокЧиселКонтекстноеМеню" id="48"/>
+									<AutoCommandBar name="СписокЧиселКоманднаяПанель" id="49">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокЧиселРасширеннаяПодсказка" id="50"/>
+									<SearchStringAddition name="СписокЧиселСтрокаПоиска" id="51">
+										<AdditionSource>
+											<Item>СписокЧисел</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокЧиселСтрокаПоискаКонтекстноеМеню" id="52"/>
+										<ExtendedTooltip name="СписокЧиселСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокЧиселСостояниеПросмотра" id="54">
+										<AdditionSource>
+											<Item>СписокЧисел</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокЧиселСостояниеПросмотраКонтекстноеМеню" id="55"/>
+										<ExtendedTooltip name="СписокЧиселСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокЧиселУправлениеПоиском" id="57">
+										<AdditionSource>
+											<Item>СписокЧисел</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокЧиселУправлениеПоискомКонтекстноеМеню" id="58"/>
+										<ExtendedTooltip name="СписокЧиселУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="СписокЧиселЗначение" id="60">
+											<DataPath>СписокЧисел.Value</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+											<ContextMenu name="СписокЧиселЗначениеКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="СписокЧиселЗначениеРасширеннаяПодсказка" id="62"/>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ExtendedEdit>false</ExtendedEdit>
+											<DropListButton>false</DropListButton>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Задание2" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание 2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ScrollOnCompress>true</ScrollOnCompress>
+					<ExtendedTooltip name="Задание2РасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="ОтветственныеПлатформа" id="79">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>ОтветственныеПлатформа</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОтветственныеПлатформаКонтекстноеМеню" id="80"/>
+							<AutoCommandBar name="ОтветственныеПлатформаКоманднаяПанель" id="81">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОтветственныеПлатформаРасширеннаяПодсказка" id="82"/>
+							<SearchStringAddition name="ОтветственныеПлатформаСтрокаПоиска" id="83">
+								<AdditionSource>
+									<Item>ОтветственныеПлатформа</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветственныеПлатформаСтрокаПоискаКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="ОтветственныеПлатформаСтрокаПоискаРасширеннаяПодсказка" id="85"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтветственныеПлатформаСостояниеПросмотра" id="86">
+								<AdditionSource>
+									<Item>ОтветственныеПлатформа</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветственныеПлатформаСостояниеПросмотраКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="ОтветственныеПлатформаСостояниеПросмотраРасширеннаяПодсказка" id="88"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтветственныеПлатформаУправлениеПоиском" id="89">
+								<AdditionSource>
+									<Item>ОтветственныеПлатформа</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветственныеПлатформаУправлениеПоискомКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="ОтветственныеПлатформаУправлениеПоискомРасширеннаяПодсказка" id="91"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ОтветственныеПлатформаНазвание" id="92">
+									<DataPath>ОтветственныеПлатформа.Название</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветственныеПлатформаНазваниеКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ОтветственныеПлатформаНазваниеРасширеннаяПодсказка" id="94"/>
+									<TextEdit>false</TextEdit>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+								</InputField>
+								<InputField name="ОтветственныеПлатформаФИО" id="95">
+									<DataPath>ОтветственныеПлатформа.ФИО</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветственныеПлатформаФИОКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ОтветственныеПлатформаФИОРасширеннаяПодсказка" id="97"/>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.BO_EffectiveMobile_СписокЧисел_ЗапросИзДвухТаблиц</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЧисел" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество чисел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Максимум" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимум</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Минимум" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимум</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЧисел" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список чисел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтветственныеПлатформа" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственные за платформу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Название" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платформа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФИО" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>35</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьСписок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСписок</Action>
+		</Command>
+		<Command name="УдалитьЛишнее" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить лишнее</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить лишнее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьЛишнее</Action>
+		</Command>
+	</Commands>
+</Form>
